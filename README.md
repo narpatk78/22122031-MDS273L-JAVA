@@ -2,7 +2,7 @@
 ##### NAME: NARPAT KUMAR
 ##### REG NO: 22122031
 ##### CLASS: MSDS-A
-##### EMAIL: narpat.kumar@msds.christuniversity
+##### EMAIL: narpat.kumar@msds.christuniversity.in
 
 #### LAB1:
 - Taking user input values of Employee's details (Name, Age, Gender, State, Company).
