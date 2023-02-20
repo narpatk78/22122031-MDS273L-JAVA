@@ -1,45 +1,20 @@
-// Write a JAVA Menu driven program that does the following:
-// You can ONLY have the below variables as global variables
-// Account Number
-// Account Holder Name
-// Account Balance
-
-
-// You MUST have the below as functions
-// To initialize the customer
-// To deposit money
-// To withdraw money
-// To print the transactions
-// To print account summary
-
-
-// Your menu will have the following operations once the customer is created
-// To deposit money
-// To withdraw money
-// To print the transactions
-// To print account summary
-
-
-// You need to draw a flowchart, and structure your results and program description and other details in README.md
-
 // importing libraries
 import java.util.Scanner;
 
-
 public class lab4{
 
-    // defining globl variables.
+    // defining global variables.
     static Scanner scan = new Scanner(System.in);
-    static int AccNumber;
+    static Scanner scan1 = new Scanner(System.in);
     static String AccHolderName;
+    static int AccNumber;
     static double AccBalance;
-    
-    
-    static int traNumber = 0;
+    static int traNumber = 0; 
 
-    // functions
-
+    // customer initilization
     static void customerInitialization(){
+        System.out.println();
+        System.out.println("          Initializing Customer          ");
         System.out.print("Enter Account Holder Name: ");
         String name = scan.nextLine();
         AccHolderName = name;
@@ -51,56 +26,68 @@ public class lab4{
         AccBalance = balance;
     }
 
+    // depositing money
     static double depositMoney(String [] transactions){
+        System.out.println();
         System.out.print("Enter Deposit Amout: ");
         double deposit = scan.nextFloat();
-        transactions[traNumber] = "Deposited: " + deposit;
         AccBalance += deposit;
+        transactions[traNumber] = "Deposit " + "                   "+ deposit + "               "+ AccBalance;
         System.out.println("New Balance: " + AccBalance);
         traNumber++;
         return AccBalance;
     }
 
+    // withdrawing money
     static double withdrawMoney(String [] transactions){
         System.out.print("Enter Withdraw Amount: ");
         double withdraw = scan.nextFloat();
         if(withdraw > AccBalance){
             System.out.println("Insufficient Balance.");
+            transactions[traNumber] = "Transaction Failed" + "";
+            traNumber++;
         }else{
-            transactions[traNumber] = "Withdrew: " + withdraw;
             AccBalance -= withdraw;
+            transactions[traNumber] = "Withdraw " + "                   "+ withdraw + "               "+ AccBalance;
             System.out.println("New Balance: " + AccBalance);
             traNumber++;
         }
         return AccBalance;
     }
 
+    // printing transactions
     static void printTransactions(String [] transactions){
-        System.out.println("***** TRANSACTIONS *****");
-        for(int k = 0; k <= transactions.length; k++){
+        System.out.println();
+        System.out.println("                    ***** TRANSACTIONS *****");
+        System.out.println("*Transaction Type*          *Amount*          *Balance*");
+        for(int k = 0; k < traNumber; k++){
             System.out.println(transactions[k]);
         }
+        System.out.println();
     }
 
+    // account summary
     static void accountSummary(String [] transactions){
-        System.out.println("***** ACCOUNT SUMMARY *****");
-        System.out.println("Account Number: " + AccNumber);
-        System.out.println("Account Holder Name: " + AccHolderName);
-        for(int last = transactions.length - 5; last < transactions.length ; last++){
-            System.out.println(transactions[last]);
-        }
+        System.out.println();
+        System.out.println("        ***** ACCOUNT SUMMARY *****");
+        System.out.println("Account Number                 :  " + AccNumber);
+        System.out.println("Account Holder Name            :  " + AccHolderName);
+        System.out.println("Number of Transactions Done    :  " + traNumber);
+        System.out.println("Current Account Balance        :  " + AccBalance);
     }
 
     public static void main(String[] args){
 
         String [] transactions = new String[1024];
         customerInitialization();
-
         char cont;
+
         do{
+            System.out.println();
             System.out.println("********** CHOOSE FROM BELOW **********\n1. Deposit Money (1).\n2. Withdraw Money (2).\n3. Print Transactions (3).\n4. Account Summary (4).");
-            System.out.println("Enter your choice number: ");
-            int choice = scan.nextInt();
+            System.out.println();
+            System.out.print("Enter your choice number: ");
+            int choice = scan1.nextInt();
             switch (choice){
                 case 1:
                     depositMoney(transactions);
@@ -116,9 +103,9 @@ public class lab4{
                     break;
             
             }
-            System.out.println("Press 'y' to continue, and anything else to quit.");
+            System.out.println();
+            System.out.println("Press 'y' or 'Y' to continue.");
             cont = scan.next().charAt(0);
-
 
         }while(cont == 'y' || cont == 'Y');
 
