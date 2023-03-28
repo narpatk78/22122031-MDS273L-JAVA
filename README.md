@@ -21,4 +21,3 @@
 - Names are stored uniquely in an String Array (max lenght of 1024).
 - The program is executed using do-while and switch cases statements.
 
->>>>>>> 7ea548fccf8db486797a7775c13c916a0dc7061e
