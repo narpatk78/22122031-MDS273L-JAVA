@@ -1,12 +1,8 @@
 import java.io.*;
 import java.util.Scanner;
-// import java.math.RoundingMode;  
-// import java.text.DecimalFormat; 
+import java.util.Arrays;
 
 public class lab7{
-
-    // private static final DecimalFormat decfor = new DecimalFormat("0.00");  
-
 
     static String [][] IrisData(String filepath){
         String data [][] = new String [151][6];
@@ -20,6 +16,7 @@ public class lab7{
                 data[c] = arrq;
                 c++;
             }
+            fileN.close();
         }
         catch(Exception e){
             System.out.println(e.getMessage());
@@ -27,33 +24,115 @@ public class lab7{
         return data;
     }
 
-    static double [] overallMean(String [][] data){
-        double meanArray [] = new double[4];
-        double sum [] = new double [4];
-        double arrSum = 0;
+
+    static float [] OverallMean(String [][] data){
+        float meanArray [] = new float[4];
+        float sum [] = new float [4];
+        float arrSum = 0.0f;
         for(int i=0; i<4; i++){
             for(int j=0; j<150;j++){
                 arrSum += Double.parseDouble(data[j+1][i+1]);
             }
             sum[i] = arrSum;
-            arrSum = 0;
+            arrSum = 0.0f;
         }
         for(int l=0; l<4;l++){
-            double num = (sum[l])/150;
+            float num = (sum[l])/150;
             meanArray[l] = num;
         }
         return meanArray;
     }
+
+    static float [] OverallMedian(float [][] overallSorted){
+        float median []= new float [4];
+        for(int i=0;i<overallSorted.length;i++){
+            if(overallSorted[i].length%2==1){
+                int index = (overallSorted[i].length/2) + 1;
+                median[i] = overallSorted[i][index];
+            }
+            else{
+                int index = (overallSorted[i].length/2);
+                median[i] = (overallSorted[i][index] + overallSorted[i][index+1])/2;
+            }
+        }
+        return median;
+    }
+
+
+    static float [][] OverallSortedArr(String [][] data){
+        float sorted [][] = new float [4][data.length-1];
+        float arr [] = new float [150];
+        for(int i=1;i<=4;i++){
+            for(int j =1; j<=data.length-1;j++){
+                arr[j-1] = Float.parseFloat(data[j][i]);
+            }
+            Arrays.sort(arr);
+            sorted[i-1] = arr;
+            // Arrays.sort(sorted[i-1]);
+        }
+        // for(int i=0;i<4;i++){
+        //     Arrays.sort(sorted[i]);
+        // }
+        return sorted;
+    }
+
+    static String [][] OverallSummaryStructure(String [][] data){
+        float mean[] = OverallMean(data);
+        float sorted[][] = OverallSortedArr(data);
+        float median[] = OverallMedian(sorted);
+        String structure [][] = new String[5][6];
+        structure[0][0]= "Attribute";
+        structure[0][1]= "Mean";
+        structure[0][2]= "Median";
+        structure[0][3]= "Mode";
+        structure[0][4]= "Min";
+        structure[0][5]= "Max";
+        for(int i=1; i<=4; i++){
+            for (int j=0;j<=5;j++){
+                switch(j){
+                    case 0:
+                    structure[i][j] = data[0][i];
+                    break;
+                    case 1:
+                    structure[i][j] = Float.toString(mean[i-1]);
+                    break;
+                    case 2:
+                    structure[i][j] = Float.toString(median[i-1]);
+                    break;
+                    case 3:
+                    structure[i][j] = "Null";
+                    break;
+                    case 4:
+                    structure[i][j] = Float.toString(sorted[i-1][0]);
+                    break;
+                    case 5:
+                    structure[i][j] = Float.toString(sorted[i-1][sorted[0].length-1]);
+                    break;
+                }
+            }   
+        }
+        return structure;
+    }
+
 
 
     public static void main(String args []){
 
         String filepath = "C:\\Users\\Narpat\\22122031-MDS273L-JAVA\\Lab 7\\Iris.csv";
         String data[][] = IrisData(filepath);
-        double mean[] = overallMean(data);
-        for(int j=0; j<mean.length;j++){
-            System.out.print("\t"+mean[j]);
-        }
-
+        float mean[] = OverallMean(data);
+        float sorted[][] = OverallSortedArr(data);
+        float median[] = OverallMedian(sorted);
+        String structure [][] = OverallSummaryStructure(data);
+        // for(int i = 0; i<5;i++){
+        //     for (int j=0; j<6;j++){
+        //         System.out.print(structure[i][j] + " ");
+        //     }
+        //     System.out.println();
+        // }
+        // for (int i=0;i<4;i++){
+        //     System.out.println(median[i]);
+        // }
+       System.out.print(Arrays.toString(sorted[3]));
     }
 }
