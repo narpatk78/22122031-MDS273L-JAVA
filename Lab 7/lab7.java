@@ -1,4 +1,5 @@
 import java.io.*;
+import java.net.SocketTimeoutException;
 import java.util.Scanner;
 import java.util.Arrays;
 
@@ -61,18 +62,16 @@ public class lab7{
 
     static float [][] OverallSortedArr(String [][] data){
         float sorted [][] = new float [4][data.length-1];
-        float arr [] = new float [150];
+        
+        int s = 0;
         for(int i=1;i<=4;i++){
+            float arr [] = new float [150];
             for(int j =1; j<=data.length-1;j++){
                 arr[j-1] = Float.parseFloat(data[j][i]);
             }
             Arrays.sort(arr);
             sorted[i-1] = arr;
-            // Arrays.sort(sorted[i-1]);
         }
-        // for(int i=0;i<4;i++){
-        //     Arrays.sort(sorted[i]);
-        // }
         return sorted;
     }
 
@@ -124,15 +123,11 @@ public class lab7{
         float sorted[][] = OverallSortedArr(data);
         float median[] = OverallMedian(sorted);
         String structure [][] = OverallSummaryStructure(data);
-        // for(int i = 0; i<5;i++){
-        //     for (int j=0; j<6;j++){
-        //         System.out.print(structure[i][j] + " ");
-        //     }
-        //     System.out.println();
-        // }
-        // for (int i=0;i<4;i++){
-        //     System.out.println(median[i]);
-        // }
-       System.out.print(Arrays.toString(sorted[3]));
+        for(int i = 0; i<5;i++){
+            for (int j=0; j<6;j++){
+                System.out.print(structure[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }
