@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class lab3 {
 
-    static Scanner scan = new Scanner(System.in);
+    static Scanner scan = new Scanner(System.in); // new static scanner object
     static int j = 0;
     static String[] studentNames = new String[1024]; // static global string array.
     static String[] details = { "Name", "Register Number", "Email", "Class", "Department" }; // static global details
@@ -33,7 +33,6 @@ public class lab3 {
             System.out.println("Class: " + arr[r][3]);
             System.out.println("Department: " + arr[r][4]);
             System.out.println();
-
         }
     }
 
@@ -54,7 +53,6 @@ public class lab3 {
                 break;
             }
         }
-
     }
 
     public static void main(String[] args) {

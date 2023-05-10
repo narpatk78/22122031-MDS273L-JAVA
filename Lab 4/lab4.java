@@ -88,6 +88,7 @@ public class lab4{
             System.out.println();
             System.out.print("Enter your choice number: ");
             int choice = scan1.nextInt();
+
             switch (choice){
                 case 1:
                     depositMoney(transactions);
@@ -101,13 +102,12 @@ public class lab4{
                 case 4:
                     accountSummary(transactions);
                     break;
-            
-            }
+                }
+
             System.out.println();
             System.out.println("Press 'y' or 'Y' to continue.");
             cont = scan.next().charAt(0);
-
+            
         }while(cont == 'y' || cont == 'Y');
-
     }
 }

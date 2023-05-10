@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class lab2 {
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in); // new scanner object
         String [] Names = new String[1024]; // creating a string array with maximum length of 1024.
         Boolean condition = false; // initializing the initial boolean condition
         int pos = 0;
@@ -25,7 +25,6 @@ public class lab2 {
             int option = Integer.parseInt(sc.nextLine()); // taking user input Options.
 
             switch (option) {
-
                 case 1: {
                     // entering names
                     System.out.println("--------------- ENTERING NAMES ---------------");
@@ -43,9 +42,7 @@ public class lab2 {
                     }
                     pos++;
                     break;
-
                 }
-
                 case 2: {
                     // searching for names
                     int i;
@@ -63,7 +60,6 @@ public class lab2 {
                     }
                     break;
                 }
-
                 case 3: {
                     // removing names
                     int j;
@@ -81,7 +77,6 @@ public class lab2 {
                     System.out.println("Name successfully removed from the list.");
                     break;
                 }
-
                 case 4:{
                     // displaying name list
                     System.out.println("Name List: ");
@@ -93,7 +88,6 @@ public class lab2 {
                     System.out.println();
                     break;
                 }
-
                 case 5: {
                     // quitting
                     System.out.println();
@@ -105,6 +99,9 @@ public class lab2 {
             }
 
         }while (condition);
+
+        // closing scanner object
+        sc.close();
     }
 }
 

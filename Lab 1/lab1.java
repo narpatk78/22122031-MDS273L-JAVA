@@ -18,6 +18,9 @@ public class lab1 {
         System.out.print("Enter Company: ");
         String company = scan.next();
 
+        // closing scanner object
+        scan.close();
+
         // printing the basic employee details.
         System.out.println("\n");
         System.out.println("--------------- BASIC EMPLOYEE DETAILS ---------------");

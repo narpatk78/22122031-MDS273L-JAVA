@@ -81,7 +81,6 @@ class Student {
             System.out.println(error);
         }
     }
-
 }
 
 public class lab6 {
@@ -225,17 +224,14 @@ public class lab6 {
                     System.out.println("Student added successfully.");
                     s1.writeToFile();
                     break;
-
                 case 2:
                     searchStudent(student);
                     break;
-
                 case 3:
                     Student s2 = new Student();
                     s2 = updateDetails(student);
                     s2.writeToFile();
-                    break;
-                    
+                    break;       
                 case 4:
                     System.out.println("Names of the Student Registered:");
                     for (int i = 0; i< stCount; i++) {
@@ -243,7 +239,6 @@ public class lab6 {
                         System.out.println(student[i].name);
                     }  
                     break;
-                        
                 case 5:
                     for (int i = 0; i< stCount; i++) {
                         student[i].displayDetails();
@@ -251,6 +246,7 @@ public class lab6 {
                     }  
                     break;
             }
+    
         }while(option != 6);
     }
 }

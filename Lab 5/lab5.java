@@ -69,7 +69,7 @@ public class lab5 {
     }
 
     public static void main(String[] args) {
-
+        
         // menu- driven program.
         char cont;
         do {
@@ -89,7 +89,6 @@ public class lab5 {
                     String plainToCipher = cipherText(plain);
                     System.out.println("Encrypted Text: " + plainToCipher);
                     break;
-
                 case 2:
                     System.out.print("Enter the Text you want to Decrypt: ");
                     String cypher = scan.nextLine();
@@ -97,14 +96,12 @@ public class lab5 {
                     String cypherToPlain = plainText(cypher);
                     System.out.println("Decrypted Text: " + cypherToPlain);
                     break;
-
             }
+
             System.out.println();
             System.out.print("Press 'y' to continue, and anything else to exit!: ");
             cont = scan.nextLine().charAt(0);
 
         } while (cont == 'y' || cont == 'Y');
-
     }
-
 }
