@@ -195,6 +195,7 @@ public class lab7{
             if(choice == 1){
                 // overall summary
                 System.out.println("Iris Dataset Summary\n");
+        
                 String structure [][] = OverallSummaryStructure(data,1,150);
                 for(int i = 0; i<5;i++){
                     for (int j=0; j<6;j++){

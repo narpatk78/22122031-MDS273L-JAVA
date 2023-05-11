@@ -35,7 +35,6 @@ public class lab1 {
         }else{
             System.out.println("Gender: FEMALE");
         }
-
         System.out.println("\n");
 
         // printing the employee details.
@@ -141,7 +140,7 @@ public class lab1 {
         // printing whether the employee works in an MNC or not.
         if (company.equals("Google") || company.equals("Facebook") || company.equals("IBM") ||company.equals("Apple") || 
         company.equals("Samsung") || company.equals("Microsoft")){
-            System.out.println("The employee is working in Top MNC Companies.");
+            System.out.println("The employee works in a Top MNC Company.");
         }
         else{
             System.out.println("The employee is not working in Top MNC Companies.");
