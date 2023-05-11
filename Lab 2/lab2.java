@@ -6,11 +6,10 @@ public class lab2 {
 
         Scanner sc = new Scanner(System.in); // new scanner object
         String [] Names = new String[1024]; // creating a string array with maximum length of 1024.
-        Boolean condition = false; // initializing the initial boolean condition
+        Boolean condition; // initializing the initial boolean condition
         int pos = 0;
 
-        // do while condition for the menu driven program.
-        do {
+        do {  // do while condition for the menu driven program.
             condition = true;
             System.out.println();
             System.out.println();
@@ -25,8 +24,7 @@ public class lab2 {
             int option = Integer.parseInt(sc.nextLine()); // taking user input Options.
 
             switch (option) {
-                case 1: {
-                    // entering names
+                case 1: {  // entering names                   
                     System.out.println("--------------- ENTERING NAMES ---------------");
                     System.out.print("Enter the Name to be added: ");
                     String name = sc.nextLine();
@@ -43,8 +41,7 @@ public class lab2 {
                     pos++;
                     break;
                 }
-                case 2: {
-                    // searching for names
+                case 2: { // searching for names                    
                     int i;
                     System.out.println();
                     System.out.println("--------------- SEARCHING FOR NAMES ---------------");
@@ -60,8 +57,7 @@ public class lab2 {
                     }
                     break;
                 }
-                case 3: {
-                    // removing names
+                case 3: { // removing names
                     int j;
                     System.out.println();
                     System.out.println("--------------- REMOVING NAMES ---------------");
@@ -77,8 +73,7 @@ public class lab2 {
                     System.out.println("Name successfully removed from the list.");
                     break;
                 }
-                case 4:{
-                    // displaying name list
+                case 4:{ // displaying name list
                     System.out.println("Name List: ");
                     for (String names : Names){
                         if(names != null){
@@ -88,8 +83,7 @@ public class lab2 {
                     System.out.println();
                     break;
                 }
-                case 5: {
-                    // quitting
+                case 5: { // quitting                    
                     System.out.println();
                     System.out.println("Quitting!!! ");
                     System.out.println();

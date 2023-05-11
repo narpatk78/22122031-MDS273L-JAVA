@@ -1,4 +1,4 @@
-Program Description:
+### Program Description:
 
 - This Java program collects Employee details which include their Name, Age, Gender, State, and the Company in which they are employed. These details are collected using an object of the Scanner class 'scan'.
 - The basic Employee details are then printed onto the console. The basic details include the Employee's Name, Age, and Gender. 
