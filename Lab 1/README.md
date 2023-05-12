@@ -8,3 +8,6 @@
 - The region and the preferable work location for the Employee is decided using a switch case, which has 30 cases, for different States and Union teritories in the country. 
 - Also, if the Company in which the Employee is employed is a top MNC, the program prints "The employee works in a Top MNC Company.", else the program prints "The employee is not working in Top MNC Companies.".
 - The program ends after printing the basic and the complete details of the Employee.
+
+#### Basic flowchart for the above mentioned program:
+Flowchart/lab1_flow.jpg
