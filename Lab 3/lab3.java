@@ -65,8 +65,8 @@ public class lab3 {
             System.out.println();
             System.out.println("------------------ SELECT AN OPTION ------------------");
             System.out.println("1. Collect Student Details (1).");
-            System.out.println("2. Displaying Student Detials (2).");
-            System.out.println("3. Searching the Details of a Student (3).");
+            System.out.println("2. Searching the Details of a Student (2).");
+            System.out.println("3. Displaying Details of all the Students (3).");
 
             System.out.println();
             System.out.print("Enter your choice: ");
