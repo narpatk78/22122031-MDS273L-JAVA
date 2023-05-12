@@ -12,3 +12,6 @@
 - Displaying the Names stored is basically performed by a for loop iterating through the array.
 - Last option is for quitting the menu-driven program.
 - The whole menu-driven program is operated using a do-while loop, where the initial condition is boolean true. The condition becomes false when the User chooses to quit the program. Basically, the loop is continued till the condition is true.  
+
+Basic flowchart for the above mentioned program:
+[Lab2 Flowchart](https://github.com/narpatk78/22122031-MDS273L-JAVA/blob/main/Flowchart/lab2_flow.jpg)
