@@ -200,9 +200,10 @@ public class lab6 {
         int stCount = 0;
         Student student[] = new Student[100];
         int option;
-
-        // do while for menu-driven program.
-        do{
+        boolean con;
+        
+        do{ // do while for menu-driven program.
+            con = true;
             System.out.println("------------ SELECT AN OPTION ------------");
             System.out.println("1. Add a Student and their Details (1).");
             System.out.println("2. Search for a Student(2).");
@@ -245,8 +246,10 @@ public class lab6 {
                         System.out.println();
                     }  
                     break;
+                case 6:
+                    con = false;
             }
     
-        }while(option != 6);
+        }while(con);
     }
 }
