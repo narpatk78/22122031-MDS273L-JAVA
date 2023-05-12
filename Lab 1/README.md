@@ -9,5 +9,6 @@
 - Also, if the Company in which the Employee is employed is a top MNC, the program prints "The employee works in a Top MNC Company.", else the program prints "The employee is not working in Top MNC Companies.".
 - The program ends after printing the basic and the complete details of the Employee.
 
-#### Basic flowchart for the above mentioned program:
-Flowchart/lab1_flow.jpg
+Basic flowchart for the above mentioned program:
+[Lab1 Flowchart](https://github.com/narpatk78/22122031-MDS273L-JAVA/blob/main/Flowchart/lab1_flow.jpg)
+
