@@ -1,0 +1,7 @@
+Iris-virginica Summary
+
+Attribute Mean Median Mode Min Max 
+SepalLengthCm 6.4619994 6.5 6.3 4.9 7.9 
+SepalWidthCm 2.908 3.0 3.0 2.2 3.8 
+PetalLengthCm 5.4320006 5.6 5.1 4.5 6.9 
+PetalWidthCm 1.9760005 2.0 1.8 1.4 2.5 

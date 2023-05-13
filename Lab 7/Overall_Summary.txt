@@ -1,0 +1,7 @@
+Overall Summary of Iris Dataset:
+
+Attribute Mean Median Mode Min Max 
+SepalLengthCm 5.809335 5.8 5.0 4.3 7.9 
+SepalWidthCm 3.0306664 3.0 3.0 2.0 4.4 
+PetalLengthCm 3.7493334 4.4 1.5 1.0 6.9 
+PetalWidthCm 1.1973335 1.3 0.2 0.1 2.5 

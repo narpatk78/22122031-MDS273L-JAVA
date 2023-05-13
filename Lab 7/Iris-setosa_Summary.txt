@@ -1,0 +1,7 @@
+Iris-setosa Summary
+
+Attribute Mean Median Mode Min Max 
+SepalLengthCm 4.904 5.0 5.1 4.3 5.8 
+SepalWidthCm 3.3479998 3.4 3.4 2.3 4.4 
+PetalLengthCm 1.4359999 1.5 1.5 1.0 1.9 
+PetalWidthCm 0.23999998 0.2 0.2 0.1 0.6 
