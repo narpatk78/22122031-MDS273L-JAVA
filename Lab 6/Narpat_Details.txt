@@ -1,6 +1,6 @@
 Name: Narpat
-Class and Division: 2MSDS-A
+Class and Division: 2msds-a
 Register Number: 22122031
-Email ID: narpat@gmail.com
-Department: Data Science
+Email ID: asasas
+Department: Data Sciecne
 Phone Number: 9587569679
