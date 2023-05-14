@@ -5,3 +5,6 @@ Given the famous iris dataset, find the 5-point summary [Mean, Median, Mode, Min
 Once the overall summary statistics have been calculated, identify the summary statistics for each Species of iris flower [Iris-setosa, Iris-versicolor, Iris-virginica].
 
 Present your results in the appropriate format and write the results in a file.
+
+Basic flowchart for the above mentioned program:
+[Lab7 Flowchart](https://github.com/narpatk78/22122031-MDS273L-JAVA/blob/main/Flowchart/lab7_flow.jpg)
